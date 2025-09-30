@@ -1,0 +1,64 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 59px 10fr;
+    grid-template-areas: 
+        "top top"
+        "bottomLeft bottomRight ";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin-top: 24px;
+}
+
+tbody {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  tr {
+    width: 50%;
+  }
+
+td {
+    display: block;
+}
+
+.data {
+    width: 580px;
+    padding: 1.5% 0%;
+    background-color: #3EB489;
+}
+
+.data p {
+    margin: 0% 37%;
+    white-space: nowrap;
+}
+
+img {
+    max-width: 100%;
+    width: 580px;
+    height: 390px;
+    margin: 0%;
+  }
+
+
+header {
+    grid-area: top;
+}
+
+#Filter {
+    grid-area: bottomLeft;
+}
+
+#menu {
+    grid-area: bottomRight;
+    
+}
+
+form {
+    color: black;
+    border: solid 3px darkgray;
+    background-color: darkgray;
+    border-radius: 2px;
+    margin-top: 3px;
+}

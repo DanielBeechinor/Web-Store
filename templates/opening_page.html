@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+        <title>ca</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='opening_page_stylesheet.css') }}"/>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}"/>
+    </head>
+
+    <body>
+        <main>
+            <section class="box">
+                <section id="title">
+                    <h1>Welcome to The Grand Plaza Casino's bar and restaurant</h1>
+                </section>
+    
+                <section id="button">
+                    <a href="{{ url_for('menu')}}">View The Menu</a>
+                </section>
+    
+            </section>
+        </main>
+    
+    </body>
+
+</html>

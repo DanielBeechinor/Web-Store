@@ -1,0 +1,70 @@
+@font-face {
+    font-family: MainFont;
+    src: url(Lato-Regular.ttf);
+}
+
+html {
+    font-size: 16px;
+    --base-colour: white;
+    font-family: MainFont;
+}
+
+body {
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    background-size: auto;
+    background-color: green;
+    background-image: url('Casino.jpg');
+}
+
+a {
+    color: black;
+    margin: 0.5em;
+    padding: 1% 1%;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5em 5em;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap; 
+    padding:10% 20%;
+}
+
+section h1 {
+    font-size: 2.9em;
+    margin: 0% 0%;
+}   
+
+#button {
+    display: block;
+    color: black;
+    white-space: nowrap;
+    margin: 1% 5%;
+    padding: 1% 2%;
+    border: solid #3EB489;
+    border-radius: 2em;
+    background-color: #3EB489;
+
+}
+
+#button a {
+    text-decoration: none;
+}
+
+#button a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+#button:hover {
+    background-color: darkgray;
+    border: solid darkgray;
+}

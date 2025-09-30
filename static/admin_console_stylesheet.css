@@ -1,0 +1,49 @@
+section {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    height: auto;
+    white-space: nowrap;
+    border: solid black;
+    background-color: white;
+    border-radius: 3em;
+    padding-bottom: 50px;
+}
+
+table {
+    justify-self: center;
+    width: 50%;
+    margin: auto;
+}
+
+Table a {
+    color: black;
+    margin: 5px 0;
+    padding: 0 0.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    border-bottom: solid 1px black;
+}
+
+Table a:visited {
+    text-decoration: none;
+}
+
+tr {
+    margin: 2em 0;
+    padding: 2em 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#add {
+    color: black;
+    background-color: #3EB489;
+    border: solid 3px #3EB489 ;
+    border-radius: 3em;
+    padding: 5px;
+    text-decoration: none;
+}

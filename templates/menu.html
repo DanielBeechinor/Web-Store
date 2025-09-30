@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+
+    <section id="menu">
+        <table>
+            {% for item in menu %}
+                <tr>
+                    <td>
+                        <img src="{{ url_for('static', filename=item['picture'])}}"/>
+                    </td>
+                    <td class="data">
+                        <p>{{ item['name'] }}    €{{ item['price'] }}    <a href="{{ url_for('add_to_cart', item_id=item['item_id'] ) }}">Add to cart</a></p>
+                    </td>
+                </tr>
+                {% endfor %}
+        </table>
+    </section>
+
+    <section id="Filter">
+        <form action="" method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.variety.label }}
+            {{ form.variety() }}
+            {% for error in form.variety.errors %}
+                {{ error }}
+            {% endfor %}
+            <br />
+            {{ form.alcoholic.label }}
+            {{ form.alcoholic() }}
+            {% for error in form.alcoholic.errors %}
+                {{ error }}
+            {% endfor %}
+            <br />
+            {{ form.submit() }}
+        </form>
+    </section>
+
+{% endblock %}

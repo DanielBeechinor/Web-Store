@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+
+    <section>
+        <table>
+            <caption>Your items</caption>
+            {% for item_id in cart %}
+                <tr>
+                    <td>{{ cart[item_id] }}</td>
+                    <td>{{ names[item_id] }}</td>
+
+                </tr>
+            {% endfor %}
+        </table>
+        
+        <p>Total: €{{ total }}</p>
+
+        <form action="" method="POST" novalidate>
+            {{ form.hidden_tag() }}
+            {{ form.table_number.label }}
+            {{ form.table_number() }}
+            {% for error in form.table_number.errors %}
+                {{ error }}
+            {% endfor %}
+            <br />
+            {{ form.payment_method.label }}
+            {{ form.payment_method() }}
+            {% for error in form.payment_method.errors %}
+                {{ error }}
+            {% endfor %}
+            <br />
+            {{ form.submit() }}  
+        </form>
+    </section>
+
+{% endblock %}

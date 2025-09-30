@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block main_content %}
+    <section>
+        <table>
+            {% for item in menu %}
+                <tr>
+                    <td>{{ item['name'] }}</td>
+                    <td>{{ item['item_id'] }}</td>
+
+                    <td>
+                        <a href="{{ url_for('remove_product', item_id=item['item_id']) }}">remove item</a> 
+                        <a href="{{ url_for('update_product', item_id=item['item_id']) }}">Update Price</a>
+                    </td>  
+                </tr>
+            {% endfor %}
+        </table>
+
+        <p><a id="add" href="{{ url_for('add_product') }}">Add Products</a></p>
+    </section>
+
+{% endblock %}

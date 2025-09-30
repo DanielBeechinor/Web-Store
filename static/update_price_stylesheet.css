@@ -1,0 +1,17 @@
+section {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    height: auto;
+    white-space: nowrap;
+    border: solid black;
+    background-color: white;
+    border-radius: 3em;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+li {
+    list-style-type: none;
+}

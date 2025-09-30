@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+    <section>
+        <h1>Your cart</h1>
+        {% if cart %}
+            <table>
+                {% for item_id in cart %}
+                    <tr>
+                        <td>{{ cart[item_id] }}</td>
+                        <td>
+                            <a href="{{ url_for('remove_from_cart', item_id=item_id) }}">-</a> 
+                            {{ names[item_id] }}  
+                            <a href="{{ url_for('add_to_cart', item_id=item_id) }}">+</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+                <p>Your cart is empty!</p>
+            {% endif %}
+        <p>
+            Total: €{{ total }}
+        </p>
+        <p id="checkout">
+            <a href="{{ url_for('checkout') }}">Checkout</a>
+        </p>
+    </section>
+{% endblock %}

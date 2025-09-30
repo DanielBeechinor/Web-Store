@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+    <section>
+        <p>Thank you for ordering from the Grand Plaza </p>
+        <table>    
+            <caption>You ordered</caption>
+            {% for item_id in order['cart'] %}
+                <tr>
+                    <td>{{ order['cart'][item_id] }}</td>
+                    <td>{{ names[item_id] }}</td>
+
+                </tr>
+            {% endfor %}
+        </table>
+        <p>The order is being delivered to Table {{ order['tableNumber'] }}</p>
+        <p>It has been payed for using {{ order['paymentMethod'] }}</p>
+        <p>And the total comes to €{{ total }}</p>
+    </section>
+{% endblock %}
